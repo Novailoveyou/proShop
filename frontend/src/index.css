@@ -1,3 +1,11 @@
 main {
   min-height: 80vh;
 }
+
+.product__price {
+  padding: 1rem 0;
+}
+
+.rating__star {
+  margin: 0.1rem;
+}
