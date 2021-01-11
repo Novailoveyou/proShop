@@ -13,7 +13,7 @@ connectDB()
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('APstatusCodeI is running...')
+  res.send('API is running...')
 })
 
 app.use('/api/products', productRoutes)
