@@ -8,7 +8,9 @@
     "start": "node backend/app",
     "app": "nodemon backend/app",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run app\" \"npm run client\""
+    "dev": "concurrently \"npm run app\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "Nover",
   "license": "MIT",
