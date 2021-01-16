@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS } from '../constants/userConstants'
+import { USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS, USER_LOGIN_FAIL } from '../constants/userConstants'
 
-export const login = (email, password) => async (dispath) => {
+export const login = (email, password) => async (dispatch) => {
   try {
-    dispath({
+    dispatch({
       type: USER_LOGIN_REQUEST
     })
 
@@ -15,7 +15,7 @@ export const login = (email, password) => async (dispath) => {
 
     const { data } = await axios.post('/api/users/login', { email, password }, config)
 
-    dispath({
+    dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: data
     })
